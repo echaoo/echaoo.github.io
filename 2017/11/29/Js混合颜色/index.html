@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Echaoo&#39;s blog</title>
+  <title>Js混合颜色 | Echaoo&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Echaoo&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="最近需要用js来计算颜色混合后的值，在网上查到了一些可以直接进行计算的公式，但是试验后发现，这些公式只在一部分情况下可以混合出我们想要的颜色(对于颜色我不懂), 经过搜集和实验，找到了一种可靠的方法，记录如下： demo地址: https://echaoo.github.io/demos/color12345678910111213141516171819202122232425262728293">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Js混合颜色">
+<meta property="og:url" content="http://yoursite.com/2017/11/29/Js混合颜色/index.html">
 <meta property="og:site_name" content="Echaoo&#39;s blog">
+<meta property="og:description" content="最近需要用js来计算颜色混合后的值，在网上查到了一些可以直接进行计算的公式，但是试验后发现，这些公式只在一部分情况下可以混合出我们想要的颜色(对于颜色我不懂), 经过搜集和实验，找到了一种可靠的方法，记录如下： demo地址: https://echaoo.github.io/demos/color12345678910111213141516171819202122232425262728293">
+<meta property="og:updated_time" content="2017-11-29T08:05:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Echaoo&#39;s blog">
+<meta name="twitter:title" content="Js混合颜色">
+<meta name="twitter:description" content="最近需要用js来计算颜色混合后的值，在网上查到了一些可以直接进行计算的公式，但是试验后发现，这些公式只在一部分情况下可以混合出我们想要的颜色(对于颜色我不懂), 经过搜集和实验，找到了一种可靠的方法，记录如下： demo地址: https://echaoo.github.io/demos/color12345678910111213141516171819202122232425262728293">
   
     <link rel="alternate" href="/atom.xml" title="Echaoo&#39;s blog" type="application/atom+xml">
   
@@ -59,9 +63,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Js混合颜色" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Js混合颜色" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/11/29/Js混合颜色/" class="article-date">
   <time datetime="2017-11-29T08:05:04.000Z" itemprop="datePublished">2017-11-29</time>
@@ -74,8 +76,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/29/Js混合颜色/">Js混合颜色</a>
+    <h1 class="article-title" itemprop="name">
+      Js混合颜色
     </h1>
   
 
@@ -97,93 +99,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-echarts鼠标事件阻止冒泡" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/11/29/echarts鼠标事件阻止冒泡/" class="article-date">
-  <time datetime="2017-11-29T07:46:48.000Z" itemprop="datePublished">2017-11-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/29/echarts鼠标事件阻止冒泡/">echarts鼠标事件阻止冒泡</a>
-    </h1>
+    <a href="/2017/11/29/echarts鼠标事件阻止冒泡/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">echarts鼠标事件阻止冒泡</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>使用echarts的鼠标事件时，需要阻止鼠标冒泡事件。本来考虑自己捕捉事件，然后通过event.stopPropagation()来阻止冒泡事件，发现事件总是捕捉不成功，而且代码非常冗余。打印出来echarts鼠标事件的回调参数仔细一看，发现回调参数里有一个event属性，点进去一看，看到里面又包含了一个event属性，这个event就是我们需要的鼠标事件！<br>有了这个鼠标事件，再想阻止冒泡或者干什么的都不是问题了，你可以直接写：params.event.event.stopPropagation()</p>
-<p>OK，问题解决</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/29/echarts鼠标事件阻止冒泡/" data-id="cjakresap00009lfy4qes303j" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-js数组对象排序" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/07/22/js数组对象排序/" class="article-date">
-  <time datetime="2017-07-22T11:58:48.000Z" itemprop="datePublished">2017-07-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/22/js数组对象排序/">js数组对象排序</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近用到排序功能，简单记录一下：</p>
-<p>js中用方法sort()排序，默认按ASCII字符顺序排序，在这里我记录三种常见的用法：</p>
-<h4 id="1、字符串排序"><a href="#1、字符串排序" class="headerlink" title="1、字符串排序"></a>1、字符串排序</h4><p>这是最简单的情况，示例如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> a = [<span class="string">'zhangsan'</span>, <span class="string">'lisi'</span>, <span class="string">'wangwu'</span>]</div><div class="line">a.sort()</div></pre></td></tr></table></figure></p>
-<p>结果为：[‘lisi’, ‘wangwu’, ‘zhangsan’]</p>
-<h4 id="2、数字排序"><a href="#2、数字排序" class="headerlink" title="2、数字排序"></a>2、数字排序</h4><p>如果一个数组如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">2</span>, <span class="number">4</span>, <span class="number">23</span>, <span class="number">5</span>, <span class="number">7</span>]</div><div class="line">arr.sort()</div></pre></td></tr></table></figure></p>
-<p>你可以试一下，这样排序得不到想要的效果，原因是，sort方法在排序时会调用toString方法，得到字符串后，按照字符串的ASCII字符顺序进行排序。好在sort方法接收一个参数，这个参数是一个用来比较的方法，叫比较函数。因此，数字的比较可以这样写：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">2</span>, <span class="number">4</span>, <span class="number">23</span>, <span class="number">5</span>, <span class="number">7</span>]</div><div class="line"><span class="keyword">let</span> compare = <span class="function"><span class="keyword">function</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> x - y</div><div class="line">&#125;</div><div class="line">arr.sort(compare)</div></pre></td></tr></table></figure></p>
-<p>简单的来说，当(x - y)返回负数则交换x和y的顺序，返回0和正数顺序不变</p>
-<h4 id="3、数组对象排序"><a href="#3、数组对象排序" class="headerlink" title="3、数组对象排序"></a>3、数组对象排序</h4><p>有时候我们需要按照对象中的某一个属性的值来排序，可以这样写：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [&#123;<span class="attr">name</span>: <span class="string">'zhangsan'</span>, <span class="attr">age</span>: <span class="number">12</span>&#125;, &#123;<span class="attr">name</span>: <span class="string">'lisi'</span>, <span class="attr">age</span>: <span class="number">10</span>&#125;]</div><div class="line"><span class="keyword">let</span> compare = <span class="function"><span class="keyword">function</span>(<span class="params">prop</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">obj1, obj2</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> obj1[prop] - obj2[prop]</div><div class="line">  &#125;</div><div class="line">  arr.sort(compare(<span class="string">"age"</span>))</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这样就能很好的得到我们想要的效果。以上</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/22/js数组对象排序/" data-id="cj81b8btv0000wwxh03lbi2p2" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         

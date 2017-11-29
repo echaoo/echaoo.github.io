@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,44 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-echarts鼠标事件阻止冒泡" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/29/echarts鼠标事件阻止冒泡/" class="article-date">
+  <time datetime="2017-11-29T07:46:48.000Z" itemprop="datePublished">2017-11-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/29/echarts鼠标事件阻止冒泡/">echarts鼠标事件阻止冒泡</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>使用echarts的鼠标事件时，需要阻止鼠标冒泡事件。本来考虑自己捕捉事件，然后通过event.stopPropagation()来阻止冒泡事件，发现事件总是捕捉不成功，而且代码非常冗余。打印出来echarts鼠标事件的回调参数仔细一看，发现回调参数里有一个event属性，点进去一看，看到里面又包含了一个event属性，这个event就是我们需要的鼠标事件！<br>有了这个鼠标事件，再想阻止冒泡或者干什么的都不是问题了，你可以直接写：params.event.event.stopPropagation()</p>
+<p>OK，问题解决</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/29/echarts鼠标事件阻止冒泡/" data-id="cjakresap00009lfy4qes303j" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Js混合颜色" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -91,7 +129,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/26/Js混合颜色/" data-id="cj74i6o7r0000quxhmfhvwbsu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/09/26/Js混合颜色/" data-id="cj74i6o7r0000quxhmfhvwbsu" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -136,7 +174,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/22/js数组对象排序/" data-id="cj81b8btv0000wwxh03lbi2p2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/07/22/js数组对象排序/" data-id="cj81b8btv0000wwxh03lbi2p2" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -181,7 +219,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/22/hello-world/" data-id="cj5f8teq50000m2xh0eh1ziv9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/07/22/hello-world/" data-id="cj5f8teq50000m2xh0eh1ziv9" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -208,7 +246,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li></ul>
     </div>
   </div>
 
@@ -216,9 +254,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/11/29/echarts鼠标事件阻止冒泡/">echarts鼠标事件阻止冒泡</a>
+          </li>
         
           <li>
             <a href="/2017/09/26/Js混合颜色/">Js混合颜色</a>
@@ -245,7 +287,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 echaoo<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

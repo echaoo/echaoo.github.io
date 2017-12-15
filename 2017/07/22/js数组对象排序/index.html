@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="js数组对象排序"/>
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/default" title="Echaoo's blog">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="http://yoursite.com/2017/07/22/js数组对象排序/"/>
+
+
+<meta name="description" content="最近用到排序功能，简单记录一下： js中用方法sort()排序，默认按ASCII字符顺序排序，在这里我记录三种常见的用法： 1、字符串排序这是最简单的情况，示例如下：12let a = [&apos;zhangsan&apos;, &apos;lisi&apos;, &apos;wangwu&apos;]a.sort() 结果为：[‘lisi’, ‘wangwu’, ‘zhangsan’] 2、数字排序如果一个数组如下：12let arr = [2, 4,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js数组对象排序">
+<meta property="og:url" content="http://yoursite.com/2017/07/22/js数组对象排序/index.html">
+<meta property="og:site_name" content="Echaoo&#39;s blog">
+<meta property="og:description" content="最近用到排序功能，简单记录一下： js中用方法sort()排序，默认按ASCII字符顺序排序，在这里我记录三种常见的用法： 1、字符串排序这是最简单的情况，示例如下：12let a = [&apos;zhangsan&apos;, &apos;lisi&apos;, &apos;wangwu&apos;]a.sort() 结果为：[‘lisi’, ‘wangwu’, ‘zhangsan’] 2、数字排序如果一个数组如下：12let arr = [2, 4,">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-07-31T00:47:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js数组对象排序">
+<meta name="twitter:description" content="最近用到排序功能，简单记录一下： js中用方法sort()排序，默认按ASCII字符顺序排序，在这里我记录三种常见的用法： 1、字符串排序这是最简单的情况，示例如下：12let a = [&apos;zhangsan&apos;, &apos;lisi&apos;, &apos;wangwu&apos;]a.sort() 结果为：[‘lisi’, ‘wangwu’, ‘zhangsan’] 2、数字排序如果一个数组如下：12let arr = [2, 4,">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> js数组对象排序 - Echaoo's blog </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">Echaoo's blog</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          js数组对象排序
+        
+      </h1>
+
+      <time class="post-time">
+          Jul 22 2017
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <p>最近用到排序功能，简单记录一下：</p>
+<p>js中用方法sort()排序，默认按ASCII字符顺序排序，在这里我记录三种常见的用法：</p>
+<h4 id="1、字符串排序"><a href="#1、字符串排序" class="headerlink" title="1、字符串排序"></a>1、字符串排序</h4><p>这是最简单的情况，示例如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> a = [<span class="string">'zhangsan'</span>, <span class="string">'lisi'</span>, <span class="string">'wangwu'</span>]</div><div class="line">a.sort()</div></pre></td></tr></table></figure></p>
+<p>结果为：[‘lisi’, ‘wangwu’, ‘zhangsan’]</p>
+<h4 id="2、数字排序"><a href="#2、数字排序" class="headerlink" title="2、数字排序"></a>2、数字排序</h4><p>如果一个数组如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">2</span>, <span class="number">4</span>, <span class="number">23</span>, <span class="number">5</span>, <span class="number">7</span>]</div><div class="line">arr.sort()</div></pre></td></tr></table></figure></p>
+<p>你可以试一下，这样排序得不到想要的效果，原因是，sort方法在排序时会调用toString方法，得到字符串后，按照字符串的ASCII字符顺序进行排序。好在sort方法接收一个参数，这个参数是一个用来比较的方法，叫比较函数。因此，数字的比较可以这样写：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">2</span>, <span class="number">4</span>, <span class="number">23</span>, <span class="number">5</span>, <span class="number">7</span>]</div><div class="line"><span class="keyword">let</span> compare = <span class="function"><span class="keyword">function</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> x - y</div><div class="line">&#125;</div><div class="line">arr.sort(compare)</div></pre></td></tr></table></figure></p>
+<p>简单的来说，当(x - y)返回负数则交换x和y的顺序，返回0和正数顺序不变</p>
+<h4 id="3、数组对象排序"><a href="#3、数组对象排序" class="headerlink" title="3、数组对象排序"></a>3、数组对象排序</h4><p>有时候我们需要按照对象中的某一个属性的值来排序，可以这样写：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [&#123;<span class="attr">name</span>: <span class="string">'zhangsan'</span>, <span class="attr">age</span>: <span class="number">12</span>&#125;, &#123;<span class="attr">name</span>: <span class="string">'lisi'</span>, <span class="attr">age</span>: <span class="number">10</span>&#125;]</div><div class="line"><span class="keyword">let</span> compare = <span class="function"><span class="keyword">function</span>(<span class="params">prop</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">obj1, obj2</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> obj1[prop] - obj2[prop]</div><div class="line">  &#125;</div><div class="line">  arr.sort(compare(<span class="string">"age"</span>))</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这样就能很好的得到我们想要的效果。以上</p>
+
+            </div>
+          
+
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2012 -
+    
+    2017
+    <span class="footer-author">echaoo.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/henryhuang/hexo-theme-polarbearsimple">Polar Bear Simple</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>

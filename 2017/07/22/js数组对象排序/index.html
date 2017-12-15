@@ -1,11 +1,15 @@
+
+
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>js数组对象排序 | Echaoo&#39;s blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近用到排序功能，简单记录一下： js中用方法sort()排序，默认按ASCII字符顺序排序，在这里我记录三种常见的用法： 1、字符串排序这是最简单的情况，示例如下：12let a = [&apos;zhangsan&apos;, &apos;lisi&apos;, &apos;wangwu&apos;]a.sort() 结果为：[‘lisi’, ‘wangwu’, ‘zhangsan’] 2、数字排序如果一个数组如下：12let arr = [2, 4,">
+<html lang="null">
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="null">
+    <title>js数组对象排序 | Echaoo&#39;s blog</title>
+
+    <!-- Open Graph -->
+    <meta name="description" content="最近用到排序功能，简单记录一下： js中用方法sort()排序，默认按ASCII字符顺序排序，在这里我记录三种常见的用法： 1、字符串排序这是最简单的情况，示例如下：12let a = [&apos;zhangsan&apos;, &apos;lisi&apos;, &apos;wangwu&apos;]a.sort() 结果为：[‘lisi’, ‘wangwu’, ‘zhangsan’] 2、数字排序如果一个数组如下：12let arr = [2, 4,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js数组对象排序">
 <meta property="og:url" content="http://yoursite.com/2017/07/22/js数组对象排序/index.html">
@@ -15,77 +19,128 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js数组对象排序">
 <meta name="twitter:description" content="最近用到排序功能，简单记录一下： js中用方法sort()排序，默认按ASCII字符顺序排序，在这里我记录三种常见的用法： 1、字符串排序这是最简单的情况，示例如下：12let a = [&apos;zhangsan&apos;, &apos;lisi&apos;, &apos;wangwu&apos;]a.sort() 结果为：[‘lisi’, ‘wangwu’, ‘zhangsan’] 2、数字排序如果一个数组如下：12let arr = [2, 4,">
-  
-    <link rel="alternate" href="/atom.xml" title="Echaoo&#39;s blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
+
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:undefined",
+  "image": "undefined",
+  "name": "echaoo",
+  "url": "http://yoursite.com"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
+</script>
+
+    
+
+    
+    
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        
+    
 
 </head>
+<body id="body" style="margin-bottom: 0;" class="pushable">
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Echaoo&#39;s blog</a>
-      </h1>
-      
+    <div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-js数组对象排序" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/07/22/js数组对象排序/" class="article-date">
-  <time datetime="2017-07-22T11:58:48.000Z" itemprop="datePublished">2017-07-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      js数组对象排序
-    </h1>
-  
 
-      </header>
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
+
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>Echaoo&#39;s blog</h3>
+        </div>
+    </div>
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <img class="ui medium bordered image" src="/images/avatar.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">echaoo</a>
+                    
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                        
+                    </div>
+
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近用到排序功能，简单记录一下：</p>
+    
+
+    
+
+    
+    <a href="/index.html" class="item" >
+        <i class="home icon"></i>
+        首页
+    </a>
+
+    
+
+    
+</div>
+
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        <div id="post-js数组对象排序" class="ui main container article-type-post">
+
+    
+
+    <div class="ui divided grid">
+
+        <div class="two column row" id="article-content">
+
+            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
+                
+
+<h1 class="ui header">
+    
+    js数组对象排序
+</h1>
+
+
+
+                <div class="article-inner">
+
+                    <div class="article-entry" itemprop="articleBody">
+                        
+                        <p>最近用到排序功能，简单记录一下：</p>
 <p>js中用方法sort()排序，默认按ASCII字符顺序排序，在这里我记录三种常见的用法：</p>
 <h4 id="1、字符串排序"><a href="#1、字符串排序" class="headerlink" title="1、字符串排序"></a>1、字符串排序</h4><p>这是最简单的情况，示例如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> a = [<span class="string">'zhangsan'</span>, <span class="string">'lisi'</span>, <span class="string">'wangwu'</span>]</div><div class="line">a.sort()</div></pre></td></tr></table></figure></p>
 <p>结果为：[‘lisi’, ‘wangwu’, ‘zhangsan’]</p>
@@ -95,109 +150,106 @@
 <h4 id="3、数组对象排序"><a href="#3、数组对象排序" class="headerlink" title="3、数组对象排序"></a>3、数组对象排序</h4><p>有时候我们需要按照对象中的某一个属性的值来排序，可以这样写：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [&#123;<span class="attr">name</span>: <span class="string">'zhangsan'</span>, <span class="attr">age</span>: <span class="number">12</span>&#125;, &#123;<span class="attr">name</span>: <span class="string">'lisi'</span>, <span class="attr">age</span>: <span class="number">10</span>&#125;]</div><div class="line"><span class="keyword">let</span> compare = <span class="function"><span class="keyword">function</span>(<span class="params">prop</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">obj1, obj2</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> obj1[prop] - obj2[prop]</div><div class="line">  &#125;</div><div class="line">  arr.sort(compare(<span class="string">"age"</span>))</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>这样就能很好的得到我们想要的效果。以上</p>
 
-      
+                        
+                    </div>
+
+                    
+                    
+                    
+
+                    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2017-07-22T11:58:48.000Z" itemprop="datePublished">2017-07-22</time>
+
+    </span>
+    <span class="post-description-item">
+        
+    </span>
+</div>
+
+                </div>
+                
+                <div id="pagination" class="nav-web ui text container pagination">
+
+    <div class="ui stackable two column divided grid container">
+        <div class="row">
+            <div class="column nav-left">
+                
+
+                <a href="/2017/11/29/echarts鼠标事件阻止冒泡/" class="ui tiny button">
+
+                    <i class="angle left icon"></i>
+                    
+                    echarts鼠标事件阻止冒泡
+                    
+
+                </a>
+
+                
+            </div>
+            <div class="column nav-right">
+                
+
+                <a class="ui tiny button disabled">下一篇<i class="angle right icon"></i></a>
+
+                
+            </div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/22/js数组对象排序/" data-id="cj81b8btv0000wwxh03lbi2p2" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2017/11/29/echarts鼠标事件阻止冒泡/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          echarts鼠标事件阻止冒泡
-        
-      </div>
-    </a>
-  
-  
-</nav>
 
-  
-</article>
+</div>
+                
+            </div>
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
+            
+            <div class="three wide computer three wide tablet column">
 
-  
-    
+                <div class="ui sticky article-toc" id="article-toc">
+                    <!-- toc -->
+                    <ol class="ui ordered list"><li><a href="#1、字符串排序"><span>1、字符串排序</span></a></li><li><a href="#2、数字排序"><span>2、数字排序</span></a></li><li><a href="#3、数组对象排序"><span>3、数组对象排序</span></a></li></ol>
+                </div>
 
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li></ul>
+            </div>
+            
+
+        </div>
     </div>
-  </div>
+</div>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/11/29/Js混合颜色/">Js混合颜色</a>
-          </li>
-        
-          <li>
-            <a href="/2017/11/29/echarts鼠标事件阻止冒泡/">echarts鼠标事件阻止冒泡</a>
-          </li>
-        
-          <li>
-            <a href="/2017/07/22/js数组对象排序/">js数组对象排序</a>
-          </li>
-        
-      </ul>
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2017 <a href="/">echaoo</a>,
+        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
+                href="http://hexo.io/" target="_blank">Hexo</a>.
     </div>
-  </div>
+</div>
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 echaoo<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js"></script>
+<!-- scripts list from theme config.yml -->
 
-  </div>
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/js/semantic-ui-algolia.js"></script>
+
+<script src="/js/aloha-events.js"></script>
+
+
+
 </body>
 </html>

@@ -12,12 +12,12 @@
 
 
 
-  <meta name="description" content="echarts鼠标事件阻止冒泡"/>
+  <meta name="description" content="CSS自动换行、强制不换行、强制断行等"/>
 
 
 
 
-  <meta name="keywords" content="web前端," />
+  <meta name="keywords" content="web前端, css," />
 
 
 
@@ -32,21 +32,21 @@
 
 
 
-<link rel="canonical" href="http://yoursite.com/2017/11/29/echarts鼠标事件阻止冒泡/"/>
+<link rel="canonical" href="http://yoursite.com/2018/09/01/CSS自动换行、强制不换行、强制断行等/"/>
 
 
-<meta name="description" content="使用echarts的鼠标事件时，需要阻止鼠标冒泡事件。本来考虑自己捕捉事件，然后通过event.stopPropagation()来阻止冒泡事件，发现事件总是捕捉不成功，而且代码非常冗余。打印出来echarts鼠标事件的回调参数仔细一看，发现回调参数里有一个event属性，点进去一看，看到里面又包含了一个event属性，这个event就是我们需要的鼠标事件！有了这个鼠标事件，再想阻止冒泡或者干什么">
-<meta name="keywords" content="web前端">
+<meta name="description" content="始终记不住强制不换行，记录一下： 强制不换行：1white-space:nowrap; 自动换行：1word-wrap:break-word; 强制英文断行：1word-break:break-all; 超出显示省略号：12ext-overflow:ellipsis;overflow:hidden;">
+<meta name="keywords" content="web前端, css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="echarts鼠标事件阻止冒泡">
-<meta property="og:url" content="http://yoursite.com/2017/11/29/echarts鼠标事件阻止冒泡/index.html">
+<meta property="og:title" content="CSS自动换行、强制不换行、强制断行等">
+<meta property="og:url" content="http://yoursite.com/2018/09/01/CSS自动换行、强制不换行、强制断行等/index.html">
 <meta property="og:site_name" content="Echaoo&#39;s blog">
-<meta property="og:description" content="使用echarts的鼠标事件时，需要阻止鼠标冒泡事件。本来考虑自己捕捉事件，然后通过event.stopPropagation()来阻止冒泡事件，发现事件总是捕捉不成功，而且代码非常冗余。打印出来echarts鼠标事件的回调参数仔细一看，发现回调参数里有一个event属性，点进去一看，看到里面又包含了一个event属性，这个event就是我们需要的鼠标事件！有了这个鼠标事件，再想阻止冒泡或者干什么">
+<meta property="og:description" content="始终记不住强制不换行，记录一下： 强制不换行：1white-space:nowrap; 自动换行：1word-wrap:break-word; 强制英文断行：1word-break:break-all; 超出显示省略号：12ext-overflow:ellipsis;overflow:hidden;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-26T08:14:24.135Z">
+<meta property="og:updated_time" content="2018-09-06T10:01:37.841Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="echarts鼠标事件阻止冒泡">
-<meta name="twitter:description" content="使用echarts的鼠标事件时，需要阻止鼠标冒泡事件。本来考虑自己捕捉事件，然后通过event.stopPropagation()来阻止冒泡事件，发现事件总是捕捉不成功，而且代码非常冗余。打印出来echarts鼠标事件的回调参数仔细一看，发现回调参数里有一个event属性，点进去一看，看到里面又包含了一个event属性，这个event就是我们需要的鼠标事件！有了这个鼠标事件，再想阻止冒泡或者干什么">
+<meta name="twitter:title" content="CSS自动换行、强制不换行、强制断行等">
+<meta name="twitter:description" content="始终记不住强制不换行，记录一下： 强制不换行：1white-space:nowrap; 自动换行：1word-wrap:break-word; 强制英文断行：1word-break:break-all; 超出显示省略号：12ext-overflow:ellipsis;overflow:hidden;">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
@@ -71,7 +71,7 @@
 
 
 
-    <title> echarts鼠标事件阻止冒泡 - Echaoo's blog </title>
+    <title> CSS自动换行、强制不换行、强制断行等 - Echaoo's blog </title>
   </head>
 
   <body>
@@ -126,12 +126,12 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          echarts鼠标事件阻止冒泡
+          CSS自动换行、强制不换行、强制断行等
         
       </h1>
 
       <time class="post-time">
-          Nov 29 2017
+          Sep 1 2018
       </time>
     </header>
 
@@ -139,8 +139,11 @@
 
     
             <div class="post-content">
-            <p>使用echarts的鼠标事件时，需要阻止鼠标冒泡事件。本来考虑自己捕捉事件，然后通过event.stopPropagation()来阻止冒泡事件，发现事件总是捕捉不成功，而且代码非常冗余。打印出来echarts鼠标事件的回调参数仔细一看，发现回调参数里有一个event属性，点进去一看，看到里面又包含了一个event属性，这个event就是我们需要的鼠标事件！<br>有了这个鼠标事件，再想阻止冒泡或者干什么的都不是问题了，你可以直接写：params.event.event.stopPropagation()</p>
-<p>OK，问题解决</p>
+            <p>始终记不住强制不换行，记录一下：</p>
+<h5 id="强制不换行："><a href="#强制不换行：" class="headerlink" title="强制不换行："></a>强制不换行：</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">white-space</span><span class="selector-pseudo">:nowrap</span>;</div></pre></td></tr></table></figure>
+<h5 id="自动换行："><a href="#自动换行：" class="headerlink" title="自动换行："></a>自动换行：</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">word-wrap</span><span class="selector-pseudo">:break-word</span>;</div></pre></td></tr></table></figure>
+<h5 id="强制英文断行："><a href="#强制英文断行：" class="headerlink" title="强制英文断行："></a>强制英文断行：</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">word-break</span><span class="selector-pseudo">:break-all</span>;</div></pre></td></tr></table></figure>
+<h5 id="超出显示省略号："><a href="#超出显示省略号：" class="headerlink" title="超出显示省略号："></a>超出显示省略号：</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ext-overflow</span><span class="selector-pseudo">:ellipsis</span>;</div><div class="line"><span class="selector-tag">overflow</span><span class="selector-pseudo">:hidden</span>;</div></pre></td></tr></table></figure>
 
             </div>
           
@@ -149,7 +152,7 @@
       <footer class="post-footer">
         <div class="post-tags">
           
-            <a href="/tags/web前端/">web前端</a>
+            <a href="/tags/web前端-css/">web前端, css</a>
           
         </div>
 
@@ -157,15 +160,9 @@
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2017/12/26/SVG自定义路径动画/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">SVG自定义路径动画</span>
-        <span class="prev-text nav-mobile">Prev</span>
-      </a>
     
-    
-      <a class="next" href="/2017/11/29/CSS的多重边框/">
-        <span class="next-text nav-default">CSS的多重边框</span>
+      <a class="next" href="/2018/07/26/Js混合颜色/">
+        <span class="next-text nav-default">Js混合颜色</span>
         <span class="prev-text nav-mobile">Next</span>
         <i class="iconfont icon-right"></i>
       </a>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="JS继承方式"/>
+
+
+
+
+  <meta name="keywords" content="web前端, js," />
+
+
+
+
+
+  <link rel="alternate" href="/default" title="Echaoo's blog">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="http://yoursite.com/2018/03/29/JS继承方式/"/>
+
+
+<meta name="description" content="原型链和继承基本上面试都会问到，总结记录一下 构造函数、原型和实例之间的关系每个构造函数都有个原型对象，原型对象都包含一个指向构造函数的指针，而实例都包含一个指向原型对象的内部指针。 原型继承总的来说就一句话，父类的实例赋值给子类的prototype。比如： 12345678910111213function SuperType () &amp;#123; // 父类   this.name = [&apos;zh">
+<meta name="keywords" content="web前端, js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS继承方式">
+<meta property="og:url" content="http://yoursite.com/2018/03/29/JS继承方式/index.html">
+<meta property="og:site_name" content="Echaoo&#39;s blog">
+<meta property="og:description" content="原型链和继承基本上面试都会问到，总结记录一下 构造函数、原型和实例之间的关系每个构造函数都有个原型对象，原型对象都包含一个指向构造函数的指针，而实例都包含一个指向原型对象的内部指针。 原型继承总的来说就一句话，父类的实例赋值给子类的prototype。比如： 12345678910111213function SuperType () &amp;#123; // 父类   this.name = [&apos;zh">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-09-20T02:56:16.674Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS继承方式">
+<meta name="twitter:description" content="原型链和继承基本上面试都会问到，总结记录一下 构造函数、原型和实例之间的关系每个构造函数都有个原型对象，原型对象都包含一个指向构造函数的指针，而实例都包含一个指向原型对象的内部指针。 原型继承总的来说就一句话，父类的实例赋值给子类的prototype。比如： 12345678910111213function SuperType () &amp;#123; // 父类   this.name = [&apos;zh">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> JS继承方式 - Echaoo's blog </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">Echaoo's blog</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                归档
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/categories">
+                            
+                            
+                                分类
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                关于
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          JS继承方式
+        
+      </h1>
+
+      <time class="post-time">
+          Mar 29 2018
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <p>原型链和继承基本上面试都会问到，总结记录一下</p>
+<h5 id="构造函数、原型和实例之间的关系"><a href="#构造函数、原型和实例之间的关系" class="headerlink" title="构造函数、原型和实例之间的关系"></a>构造函数、原型和实例之间的关系</h5><p>每个构造函数都有个原型对象，原型对象都包含一个指向构造函数的指针，而实例都包含一个指向原型对象的内部指针。</p>
+<h5 id="原型继承"><a href="#原型继承" class="headerlink" title="原型继承"></a>原型继承</h5><p>总的来说就一句话，父类的实例赋值给子类的prototype。比如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span> (<span class="params"></span>) </span>&#123; <span class="comment">// 父类</span></div><div class="line">   <span class="keyword">this</span>.name = [<span class="string">'zhangsan'</span>, <span class="string">'lisi'</span>]</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span> (<span class="params"></span>) </span>&#123; <span class="comment">// 子类</span></div><div class="line">  <span class="keyword">this</span>.age = <span class="number">12</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">SubType.prototype = <span class="keyword">new</span> SuperType() <span class="comment">// 将父类的实例赋值给子类的prototype</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> sub = <span class="keyword">new</span> SubType() <span class="comment">// 实例化子类</span></div><div class="line">sub.name <span class="comment">// ['zhangsan', 'lisi']</span></div><div class="line">sub.age <span class="comment">// 12</span></div></pre></td></tr></table></figure>
+<p>  之前一直带着对prototype的畏惧，继承都是靠记忆，后来想想，其实只要记住构造函数、原型和实例之间的关系就好：父类的实例包含指向父类原型的指针，将父类的示例赋值给子类的原型，子类的原型自然就包含指向父类的指针，因此也就实现了继承。</p>
+<p>顺带提一句，所有函数的默认原型都是Object的实例，因此默认原型都会包含一个内部指针，指向Object.prototype。</p>
+<p>原型链虽然强大，但也存在一些问题，即包含引用类型值的问题。原型上的属性会被所有实例共享，如果父类有引用类型的属性，就会出现这种问题：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 继续上一个例子，假如SubType使用原型继承了SuperType</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> sub1 = <span class="keyword">new</span> SubType() <span class="comment">// 实例1</span></div><div class="line">sub1.name.push(<span class="string">'wangwu'</span>) <span class="comment">// 给name添加一个元素，因为name是引用类型，因此所有实例共享同一个引用</span></div><div class="line">sub1.name <span class="comment">// ['zhangsan', 'lisi', 'wangwu']</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> sub2 = <span class="keyword">new</span> SubType() <span class="comment">// 实例2</span></div><div class="line">sub2.name <span class="comment">// ['zhangsan', 'lisi', 'wangwu']，实例2与实例1共享了同一个name</span></div></pre></td></tr></table></figure></p>
+<p>总的来说就是：原型链方式可以实现所有属性方法共享，但无法做到属性、方法独享</p>
+<p>因此出现了构造函数继承方式</p>
+<h5 id="经典继承（借用构造函数）"><a href="#经典继承（借用构造函数）" class="headerlink" title="经典继承（借用构造函数）"></a>经典继承（借用构造函数）</h5><p>基本思想是在子类型构造函数的内部调用超类型构造函数。比如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span> (<span class="params"></span>) </span>&#123; <span class="comment">// 父类</span></div><div class="line">   <span class="keyword">this</span>.name = [<span class="string">'zhangsan'</span>, <span class="string">'lisi'</span>]</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span> (<span class="params"></span>) </span>&#123; <span class="comment">// 子类</span></div><div class="line">  <span class="keyword">this</span>.age = <span class="number">12</span></div><div class="line">  SuperType.call(<span class="keyword">this</span>) <span class="comment">// 通过call()方法执行父类构造函数实现继承</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">const</span> sub1 = <span class="keyword">new</span> SubType() <span class="comment">// 实例1</span></div><div class="line">sub1.name.push(<span class="string">'wangwu'</span>) <span class="comment">// 给name添加一个元素</span></div><div class="line">sub1.name <span class="comment">// ['zhangsan', 'lisi', 'wangwu']</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> sub2 = <span class="keyword">new</span> SubType() <span class="comment">// 实例2</span></div><div class="line">sub2.name <span class="comment">// ['zhangsan', 'lisi']，实例2的nema没有被改变</span></div></pre></td></tr></table></figure></p>
+<p>每当新创建一个SubType实例时，都会执行SuperType.call(this)，此时的this是当前实例的上下文，因此，SuperType的属性就会被初始化到SubType的实例上，这就实现了继承。</p>
+<p>借用构造函数除能独享属性、方法外还能在子类构造函数中传递参数，但代码无法复用。总的来说就是能实现属性、方法独享，但无法做到属性、方法共享</p>
+<p>因此出现了一种继承方式，将两者结合起来，名叫组合式继承</p>
+<h5 id="组合式继承"><a href="#组合式继承" class="headerlink" title="组合式继承"></a>组合式继承</h5><p>之前说的两种继承各自有优缺点，组合起来自是要取其有点，即需要独享的属性方法就用构造函数继承，需要共享的就用原型链继承。例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span> (<span class="params">name</span>) </span>&#123; <span class="comment">// 父类</span></div><div class="line">   <span class="keyword">this</span>.name = name</div><div class="line">   <span class="keyword">this</span>.colors = [<span class="string">'red'</span>, <span class="string">'blue'</span>, <span class="string">'green'</span>]</div><div class="line">&#125;</div><div class="line"></div><div class="line">SuperType.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span> (<span class="params">name, age</span>) </span>&#123; <span class="comment">// 子类</span></div><div class="line">  SuperType.call(<span class="keyword">this</span>, name) <span class="comment">// 继承属性</span></div><div class="line">  <span class="keyword">this</span>.age = age</div><div class="line">&#125;</div><div class="line"></div><div class="line">SubType.prototype = <span class="keyword">new</span> SuperType() <span class="comment">// 继承方法</span></div><div class="line"></div><div class="line">SubType.prototype.sayAge = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.age)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> sub1 = <span class="keyword">new</span> SubType(<span class="string">'Nicholas'</span>, <span class="number">29</span>)</div><div class="line">sub1.colors.push(<span class="string">'black'</span>)</div><div class="line">sub1.colors <span class="comment">// ['red', 'blue', 'green', 'black']</span></div><div class="line">sub1.sayName() <span class="comment">// 'Nicholas'</span></div><div class="line">sub1.sayAge() <span class="comment">// 29</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> sub2 = <span class="keyword">new</span> SubType(<span class="string">'Greg'</span>, <span class="number">27</span>)</div><div class="line">sub2.name <span class="comment">// ['red', 'blue', 'green']</span></div><div class="line">sub2.sayName() <span class="comment">// 'Greg'</span></div><div class="line">sub2.sayAge() <span class="comment">// 27</span></div></pre></td></tr></table></figure>
+<p>这是继承时最常用的继承方式。</p>
+<p>其他的后续跟上</p>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+        <div class="post-tags">
+          
+            <a href="/tags/web前端-js/">web前端, js</a>
+          
+        </div>
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2018/04/26/将普通函数封装为Promise/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">将普通函数封装为Promise</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2018/01/02/express+mysql简单CRUD示例/">
+        <span class="next-text nav-default">express + mysql简单CRUD示例</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2012 -
+    
+    2018
+    <span class="footer-author">echaoo.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/henryhuang/hexo-theme-polarbearsimple">Polar Bear Simple</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>

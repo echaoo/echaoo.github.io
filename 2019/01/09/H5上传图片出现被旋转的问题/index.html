@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="H5上传照片出现被旋转以及照片模糊的问题"/>
+
+
+
+
+  <meta name="keywords" content="web前端, H5," />
+
+
+
+
+
+  <link rel="alternate" href="/default" title="Echaoo's blog">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="http://yoursite.com/2019/01/09/H5上传图片出现被旋转的问题/"/>
+
+
+<meta name="description" content="用H5的上传图片功能上传图片时，主要发现了两个不能接受的问题： 1、预览图片时图片被旋转了 2、图片特别模糊 解决方法Exif.js 解决图片被旋转的问题总的来说，拍摄照片时会记录一些拍摄时的信息，比如拍摄方向。对于用户上传的图片，只要拿到图片的方向信息并判断方向是否正确，从而进行旋转操作来展示图片就可以了，这里用Exif.js拿到图片的信息, 请参考以下示例代码 关于Exif.js的介绍、用法和">
+<meta name="keywords" content="web前端, H5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="H5上传照片出现被旋转以及照片模糊的问题">
+<meta property="og:url" content="http://yoursite.com/2019/01/09/H5上传图片出现被旋转的问题/index.html">
+<meta property="og:site_name" content="Echaoo&#39;s blog">
+<meta property="og:description" content="用H5的上传图片功能上传图片时，主要发现了两个不能接受的问题： 1、预览图片时图片被旋转了 2、图片特别模糊 解决方法Exif.js 解决图片被旋转的问题总的来说，拍摄照片时会记录一些拍摄时的信息，比如拍摄方向。对于用户上传的图片，只要拿到图片的方向信息并判断方向是否正确，从而进行旋转操作来展示图片就可以了，这里用Exif.js拿到图片的信息, 请参考以下示例代码 关于Exif.js的介绍、用法和">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-27T08:26:05.788Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="H5上传照片出现被旋转以及照片模糊的问题">
+<meta name="twitter:description" content="用H5的上传图片功能上传图片时，主要发现了两个不能接受的问题： 1、预览图片时图片被旋转了 2、图片特别模糊 解决方法Exif.js 解决图片被旋转的问题总的来说，拍摄照片时会记录一些拍摄时的信息，比如拍摄方向。对于用户上传的图片，只要拿到图片的方向信息并判断方向是否正确，从而进行旋转操作来展示图片就可以了，这里用Exif.js拿到图片的信息, 请参考以下示例代码 关于Exif.js的介绍、用法和">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> H5上传照片出现被旋转以及照片模糊的问题 - Echaoo's blog </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">Echaoo's blog</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                归档
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/categories">
+                            
+                            
+                                分类
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                关于
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          H5上传照片出现被旋转以及照片模糊的问题
+        
+      </h1>
+
+      <time class="post-time">
+          Jan 9 2019
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <p>用H5的上传图片功能上传图片时，主要发现了两个不能接受的问题：</p>
+<p>1、预览图片时图片被旋转了</p>
+<p>2、图片特别模糊</p>
+<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><h5 id="Exif-js-解决图片被旋转的问题"><a href="#Exif-js-解决图片被旋转的问题" class="headerlink" title="Exif.js 解决图片被旋转的问题"></a>Exif.js 解决图片被旋转的问题</h5><p>总的来说，拍摄照片时会记录一些拍摄时的信息，比如拍摄方向。对于用户上传的图片，只要拿到图片的方向信息并判断方向是否正确，从而进行旋转操作来展示图片就可以了，这里用<a href="https://github.com/exif-js/exif-js" target="_blank" rel="external">Exif.js</a>拿到图片的信息, 请参考以下示例代码</p>
+<p>关于Exif.js的介绍、用法和总结，推荐参考<a href="https://www.cnblogs.com/libin-1/p/5888452.html" target="_blank" rel="external">这篇博文</a></p>
+<h5 id="图片模糊的问题"><a href="#图片模糊的问题" class="headerlink" title="图片模糊的问题"></a>图片模糊的问题</h5><p>按照上面的思路，有一个图片旋转的过程，示例代码中是使用一个canvas来绘制旋转图片：首先将画布长宽设置为图片的原始长宽，然后将canvas转化为图片。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> imgWidth = <span class="keyword">this</span>.naturalWidth <span class="comment">// 将画布设置为原始尺寸</span></div><div class="line"><span class="keyword">const</span> imgHeight = <span class="built_in">Math</span>.ceil(imgWidth * <span class="keyword">this</span>.height / <span class="keyword">this</span>.width)</div><div class="line">canvas.width = imgWidth</div><div class="line">canvas.height = imgHeight</div></pre></td></tr></table></figure></p>
+<p>但是这样绘制出来的图片会比较模糊。网上搜索有很多解决方案，我用了一个最简单易懂的：即将画布设置的大一点，绘制完图片后，再将画图显示为原来尺寸。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> imgWidth = <span class="keyword">this</span>.naturalWidth * <span class="number">2</span><span class="comment">// 将画布设置为原始尺寸的两倍</span></div><div class="line"><span class="keyword">const</span> imgHeight = <span class="built_in">Math</span>.ceil(imgWidth * <span class="keyword">this</span>.height / <span class="keyword">this</span>.width)</div><div class="line">canvas.width = imgWidth</div><div class="line">canvas.height = imgHeight</div></pre></td></tr></table></figure></p>
+<p>以下是代码示例：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> file = <span class="built_in">document</span>.getElementById(<span class="string">'inputImg'</span>).files[<span class="number">0</span>]</div><div class="line"><span class="keyword">let</span> Orientation = <span class="literal">null</span> <span class="comment">// 图片方向</span></div><div class="line"><span class="keyword">const</span> reader = <span class="keyword">new</span> FileReader()</div><div class="line"><span class="keyword">let</span> finalImg = <span class="literal">null</span> <span class="comment">// 用来存放最后生成的图片</span></div><div class="line"><span class="comment">// reader.readAsDataURL(file)</span></div><div class="line"><span class="keyword">if</span> (file) &#123;</div><div class="line">  <span class="keyword">const</span> _this = <span class="keyword">this</span></div><div class="line">  EXIF.getData(file, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 获取图片方向</span></div><div class="line">    Orientation = EXIF.getTag(<span class="keyword">this</span>, <span class="string">'Orientation'</span>)</div><div class="line">    </div><div class="line">    reader.onload = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</div><div class="line">      _this.isChoose = <span class="literal">true</span></div><div class="line">      <span class="keyword">const</span> image = <span class="keyword">new</span> Image()</div><div class="line">      image.src = e.target.result</div><div class="line">      image.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">// 控制上传图片的宽高</span></div><div class="line">        <span class="keyword">const</span> imgWidth = <span class="keyword">this</span>.naturalWidth * <span class="number">2</span></div><div class="line">        <span class="keyword">const</span> imgHeight = <span class="built_in">Math</span>.ceil(imgWidth * <span class="keyword">this</span>.height / <span class="keyword">this</span>.width)</div><div class="line">        <span class="comment">// 用canvas来绘制旋转图片</span></div><div class="line">        <span class="keyword">const</span> canvas = <span class="built_in">document</span>.createElement(<span class="string">"canvas"</span>)</div><div class="line">        <span class="keyword">const</span> ctx = canvas.getContext(<span class="string">'2d'</span>)</div><div class="line">        canvas.width = imgWidth</div><div class="line">        canvas.height = imgHeight</div><div class="line">        <span class="comment">// 判断图片方向</span></div><div class="line">        <span class="keyword">if</span>(Orientation &amp;&amp; Orientation != <span class="number">1</span>)&#123;</div><div class="line">          <span class="keyword">switch</span>(Orientation)&#123;</div><div class="line">            <span class="keyword">case</span> <span class="number">6</span>:     <span class="comment">// 旋转90度</span></div><div class="line">              canvas.width = imgHeight</div><div class="line">              canvas.height = imgWidth</div><div class="line">              ctx.rotate(<span class="built_in">Math</span>.PI / <span class="number">2</span>)</div><div class="line">              <span class="comment">// (0,-imgHeight) 从旋转原理图那里获得的起始点</span></div><div class="line">              ctx.drawImage(<span class="keyword">this</span>, <span class="number">0</span>, -imgHeight, imgWidth, imgHeight)</div><div class="line">              <span class="keyword">break</span></div><div class="line">            <span class="keyword">case</span> <span class="number">3</span>:     <span class="comment">// 旋转180度</span></div><div class="line">              ctx.rotate(<span class="built_in">Math</span>.PI)</div><div class="line">              ctx.drawImage(<span class="keyword">this</span>, -imgWidth, -imgHeight, imgWidth, imgHeight)</div><div class="line">              <span class="keyword">break</span></div><div class="line">            <span class="keyword">case</span> <span class="number">8</span>:     <span class="comment">// 旋转-90度</span></div><div class="line">              canvas.width = imgHeight</div><div class="line">              canvas.height = imgWidth</div><div class="line">              ctx.rotate(<span class="number">3</span> * <span class="built_in">Math</span>.PI / <span class="number">2</span>)</div><div class="line">              ctx.drawImage(<span class="keyword">this</span>, -imgWidth, <span class="number">0</span>, imgWidth, imgHeight)</div><div class="line">              <span class="keyword">break</span></div><div class="line">          &#125;</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">          ctx.drawImage(<span class="keyword">this</span>, <span class="number">0</span>, <span class="number">0</span>, imgWidth, imgHeight)</div><div class="line">        &#125;</div><div class="line">        <span class="comment">// 将canvas转化成图片</span></div><div class="line">        finalImg = canvas.toDataURL(<span class="string">"image/jpeg"</span>, <span class="number">1.0</span>)</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">    reader.readAsDataURL(file)</div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+        <div class="post-tags">
+          
+            <a href="/tags/web前端-H5/">web前端, H5</a>
+          
+        </div>
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2018/09/01/CSS自动换行、强制不换行、强制断行等/">
+        <span class="next-text nav-default">CSS自动换行、强制不换行、强制断行等</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2012 -
+    
+    2019
+    <span class="footer-author">echaoo.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/henryhuang/hexo-theme-polarbearsimple">Polar Bear Simple</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
